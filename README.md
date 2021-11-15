@@ -146,7 +146,7 @@ source /path to file/iscesource
 This will temporarily add ISCE variables to your path. You have to run the source again if you close the terminal. This is useful if you want to have different versions of ISCE installed at the same time. If you want to use only one version and set up paths manually for each version then you can add above lines in your preferred shell profile file.  
   
 If the first method fails to solve environment or you don't want to set up paths manually you can build ISCE with cmake.  
-### 2. Building ISCE with cmake.  
+### 2. Building ISCE with cmake. (recommended) 
 Create an environment with python 3.8 version and activate:  
 ```
 conda create -n isce2 python=3.8
