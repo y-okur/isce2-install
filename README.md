@@ -87,7 +87,7 @@ touch .bashrc
 Run `echo $PATH` to check if you have anaconda / miniconda in your path.  
 Run `which python` and `which python3` to make sure the python is running through anaconda / miniconda path.  
 If not, check your path `sudo nano /etc/paths` and make sure to comment other python paths.  
-Also check shell profiles (.bash_profile, .bashrc, .profile, .zshrc) and and comment python paths other than anaconda / miniconda.  
+Also check shell profiles (.bash_profile, .bashrc, .zprofile, .zshrc) and and comment python paths other than anaconda / miniconda.  
 
 ### 4. Basic Conda Commands
 When you open a new terminal you should see (base) at the beginning of the prompt. Some useful conda commands are:  
