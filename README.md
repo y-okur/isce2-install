@@ -112,7 +112,7 @@ conda create - n isce2 pyhon=3.8
 then run  
 ```
 conda config --add channels conda-forge  
-conda config --set channgel_priority strict  
+conda config --set channel_priority strict  
 ```  
 finally  
 ```
