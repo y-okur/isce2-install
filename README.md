@@ -105,7 +105,7 @@ We use environment because we can create separate python builds (different versi
 There are two ways to install ISCE with anaconda / miniconda.
 ### 1. Installing from conda-forge repositories.  
 This is very easy, but you have to add ISCE variables to your path manually.
-* Create an environment called "isce2" (or you can choose whatever you like) with python 3.8 version.  
+* Create an environment called "isce2" (or you can choose whatever you like). It might be a good idea to name it the same as the isce version you are going to install.
 ```
 conda create - n isce2  
 ```  
@@ -121,7 +121,8 @@ or
 ```
 conda install -c "conda-forge/label/cf202003" isce2
 ```
-Conda will automatically installs all dependencies and solve the environment.  
+Conda will automatically installs all dependencies.  
+
 After the installation is finished, check if the $ISCE_HOME variable is set properly by running:
 ```
 echo $ISCE_HOME
