@@ -116,10 +116,20 @@ conda config --set channel_priority strict
 ```  
 finally  
 ```
-conda install isce2  
+conda install -c conda-forge isce2
+```
+or
+```
+conda install -c "conda-forge/label/cf202003" isce2
 ```
 Conda will automatically installs all dependencies and solve the environment.  
-After the installation is finished, create a new file called "iscesource" in a convenient place. Copy & paste the following inside the file:  
+After the installation is finished, check if the $ISCE_HOME variable is set properly by running:
+```
+echo $ISCE_HOME
+/Users/yagizalp/anaconda3/envs/isce262/lib/python3.11/site-packages/isce
+````
+
+
 ```
 #!/bin/env bash -f
 #ISCE
