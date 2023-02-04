@@ -107,7 +107,7 @@ There are two ways to install ISCE with anaconda / miniconda.
 This is very easy, but you have to add ISCE variables to your path manually.
 * Create an environment called "isce2" (or you can choose whatever you like) with python 3.8 version.  
 ```
-conda create - n isce2 pyhon=3.8  
+conda create - n isce2  
 ```  
 then run  
 ```
@@ -127,52 +127,27 @@ After the installation is finished, check if the $ISCE_HOME variable is set prop
 echo $ISCE_HOME
 /Users/yagizalp/anaconda3/envs/isce262/lib/python3.11/site-packages/isce
 ````
-The scripts that you yill be using from the command line are located in the $ISCE_HOME/applications. You need to add this to your PATH if you want to call these scripts from command line.
+The scripts that you will be using from the command line are located in the $ISCE_HOME/applications. You need to add this to your PATH if you want to call these scripts from command line.
 
 After you activate your environment you can run:
 ```
 export PATH=$ISCE_HOME/applications:$PATH
 ```
+### *Optional
 Or if you want to add this path to your PATH variable once you activate your environment, go to $CONDA_PREFIX/etc/conda
 
 There are two folders named as "activate.d" and "deactivate.d"
 
-Go to activate.d and edit "env_vars.sh". You can add the path to $ISCE_HOME/applications in this file:
+Go to activate.d and edit "env_vars.sh". You can add the path to $ISCE_HOME/applications in this file like this example:
 ```
 export PATH=/Users/yagizalp/anaconda3/envs/isce262/lib/python3.11/site-packages/isce/applications:$PATH
 ```
-However, once you deactivate your environment this path will still exists in your PATH variable and it may cause some path issues if you have multiple ISCE installations. In order to solve this problem you can add this line to the $CONDA_PREFIX/etc/conda/deactivate.d/env/vars.sh:
+However, once you deactivate your environment this path will still exist in your PATH variable unless you logout from your current shell. This may cause some path issues if you have multiple ISCE installations. In order to solve this problem you can add this line to the $CONDA_PREFIX/etc/conda/deactivate.d/env/vars.sh
 ```
 export PATH=$(echo ${PATH} | sed -r 's|/Users/yagizalp/anaconda3/envs/isce262/lib/python3.11/site-packages/isce/applications:||')
 ```
 
-```
-#!/bin/env bash -f
-#ISCE
-export CPL_ZIP_ENCODING=UTF-8
-#export ISCE_ROOT="~/src/isce2"
-export ISCE_HOME="${CONDA_PREFIX}/lib/python3.8/site-packages/isce"
-export ISCE_STACK="${CONDA_PREFIX}/share/isce2"
-export PATH="${ISCE_HOME}/bin:${ISCE_HOME}/applications:${PATH}"
-export PYTHONPATH="${ISCE_HOME}/applications:${PYTHONPATH}"
-#--select topsStack..if you wish to use stripmapstack, change the the following lines.
-export stripmapStack=""
-#export stripmapStack=${ISCE_STACK}/stripmapStack
-export topstack=""
-export PATH_ALOSSTACK=${ISCE_STACK}/alosStack
-##export topstack=${ISCE_STACK}/topsStack
-export timeseries="${ISCE_STACK}/timeseries/prepStackToStaMPS/bin"
-export PATH="${PATH}:${topstack}:${stripmapStack}:${PATH_ALOSSTACK}:${timeseries}"
-export PYTHONPATH="${topstack}:${stripmapStack}:${PATH_ALOSSTACK}:${timeseries}:${PYTHONPATH}"
-```
-After you activate "isce2" environment run:
-```
-source /path to file/iscesource
-```
-This will temporarily add ISCE variables to your path. You have to run the source again if you close the terminal. This is useful if you want to have different versions of ISCE installed at the same time. If you want to use only one version and set up paths manually for each version then you can add above lines in your preferred shell profile file.  
-  
-If the first method fails to solve environment or you don't want to set up paths manually you can build ISCE with cmake.  
-### 2. Building ISCE with cmake. (recommended) 
+### 2. Building ISCE with cmake.
 Create an environment with python 3.8 version and activate:  
 ```
 conda create -n isce2 python=3.8
