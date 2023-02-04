@@ -134,7 +134,7 @@ After you activate your environment you can run:
 ```
 export PATH=$ISCE_HOME/applications:$PATH
 ```
-### *Optional
+### *Optional*
 Or if you want to add this path automatically to your PATH variable once you activate your environment, go to $CONDA_PREFIX/etc/conda
 
 There are two folders named as "activate.d" and "deactivate.d"
@@ -183,8 +183,18 @@ make install
 Close & reopen the terminal and activate the "isce2" environment. Then run:   
 ```
 conda activate isce2
-topsApp.py -h
+topsApp.py --help
 ```
 This should give you an introduction text of topsApp.py module and details about its parameters.
+
+Also
+
+```
+python3
+import isce
+isce.version.release_version
+```
+If you are not seeing any errors, installation should be fine.
+
   
 For more information about ISCE, please check the github page of ISCE > https://github.com/isce-framework/isce2
