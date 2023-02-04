@@ -135,7 +135,7 @@ After you activate your environment you can run:
 export PATH=$ISCE_HOME/applications:$PATH
 ```
 ### *Optional
-Or if you want to add this path to your PATH variable once you activate your environment, go to $CONDA_PREFIX/etc/conda
+Or if you want to add this path automatically to your PATH variable once you activate your environment, go to $CONDA_PREFIX/etc/conda
 
 There are two folders named as "activate.d" and "deactivate.d"
 
