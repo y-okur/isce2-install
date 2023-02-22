@@ -107,7 +107,7 @@ There are two ways to install ISCE with anaconda / miniconda.
 This is very easy, but you have to add ISCE variables to your path manually.
 * Create an environment called "isce2" (or you can choose whatever you like). It might be a good idea to name it the same as the isce version you are going to install.
 ```
-conda create - n isce2  
+conda create -n isce2  
 ```  
 then run  
 ```
