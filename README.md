@@ -107,12 +107,19 @@ There are two ways to install ISCE with anaconda / miniconda.
 This is very easy, but you have to add ISCE variables to your path manually.
 * Create an environment called "isce2" (or you can choose whatever you like). It might be a good idea to name it the same as the isce version you are going to install.
 ```
-conda create -n isce2  
+conda create -n isce2 python=3.8
 ```  
 then run  
 ```
+conda config --add channels conda-forge
 conda config --set channel_priority strict  
 ```  
+```
+conda activate isce2  
+``` 
+```
+conda install numpy=1.21.3
+``` 
 finally  
 ```
 conda install -c conda-forge isce2
