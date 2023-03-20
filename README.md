@@ -133,7 +133,7 @@ Conda will automatically installs all dependencies.
 After the installation is finished, check if the $ISCE_HOME variable is set properly by running:
 ```
 echo $ISCE_HOME
-/Users/yagizalp/anaconda3/envs/isce262/lib/python3.11/site-packages/isce
+/Users/yagizalp/anaconda3/envs/isce2/lib/python3.8/site-packages/isce
 ````
 The scripts that you will be using from the command line are located in the $ISCE_HOME/applications. You need to add this to your PATH if you want to call these scripts from command line.
 
