@@ -1,5 +1,5 @@
 # Manual for ISCE installation with Anaconda / Miniconda (MacOS with intel processors)
-for Apple Silicon, please follow this guide > https://github.com/lijun99/isce2-install#macosx-with-anaconda3-and-homebrew-apple-silicon
+### For Apple Silicon, please follow this guide > https://github.com/lijun99/isce2-install#macosx-with-anaconda3-and-homebrew-apple-silicon
 
 There are several ways to install ISCE on MacOS Machine with Anaconda / Miniconda.
 * Install from conda-forge repositories
